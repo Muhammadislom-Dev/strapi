@@ -855,6 +855,39 @@ export interface ApiContactContact extends Schema.CollectionType {
   };
 }
 
+export interface ApiServiceService extends Schema.CollectionType {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Name: Attribute.String;
+    Organization: Attribute.String;
+    Image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSliderSlider extends Schema.CollectionType {
   collectionName: 'sliders';
   info: {
@@ -887,40 +920,6 @@ export interface ApiSliderSlider extends Schema.CollectionType {
   };
 }
 
-export interface ApiWeddingOrganizationWeddingOrganization
-  extends Schema.CollectionType {
-  collectionName: 'wedding_organizations';
-  info: {
-    singularName: 'wedding-organization';
-    pluralName: 'wedding-organizations';
-    displayName: 'Wedding Organization';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Title: Attribute.String;
-    Name: Attribute.String;
-    Description: Attribute.String;
-    Image: Attribute.Media;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::wedding-organization.wedding-organization',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::wedding-organization.wedding-organization',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -941,8 +940,8 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::contact.contact': ApiContactContact;
+      'api::service.service': ApiServiceService;
       'api::slider.slider': ApiSliderSlider;
-      'api::wedding-organization.wedding-organization': ApiWeddingOrganizationWeddingOrganization;
     }
   }
 }

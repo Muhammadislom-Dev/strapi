@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "wedding_organizations",
+  "collectionName": "services",
   "info": {
-    "singularName": "wedding-organization",
-    "pluralName": "wedding-organizations",
-    "displayName": "Wedding Organization"
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "service"
   },
   "options": {
     "draftAndPublish": true
@@ -17,7 +17,7 @@
     "Name": {
       "type": "string"
     },
-    "Description": {
+    "Organization": {
       "type": "string"
     },
     "Image": {
