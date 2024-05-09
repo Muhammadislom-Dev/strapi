@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wedding_organizations",
+  "info": {
+    "singularName": "wedding-organization",
+    "pluralName": "wedding-organizations",
+    "displayName": "Wedding Organization"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

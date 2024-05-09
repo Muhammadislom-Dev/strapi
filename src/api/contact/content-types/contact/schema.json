@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Instagram": {
+      "type": "string"
+    },
+    "TikTok": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "PhoneNumber_One": {
+      "type": "string"
+    },
+    "PhoneNumber_Two": {
+      "type": "string"
+    }
+  }
+}
