@@ -794,12 +794,13 @@ export interface ApiAboutUsAboutUs extends Schema.CollectionType {
     singularName: 'about-us';
     pluralName: 'about-uses';
     displayName: 'About Us';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String;
+    Title: Attribute.Text;
     Description: Attribute.Text;
     Image: Attribute.Media;
     createdAt: Attribute.DateTime;
@@ -861,6 +862,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     singularName: 'service';
     pluralName: 'services';
     displayName: 'service';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -870,6 +872,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     Name: Attribute.String;
     Organization: Attribute.String;
     Image: Attribute.Media;
+    Description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
